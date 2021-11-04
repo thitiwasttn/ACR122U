@@ -1,4 +1,4 @@
-# ACR122U
+# Card Reader ACR122U
 
 
-copy uid to clipboard and past to keyboard
+copy UID to clipboard and past to keyboard
