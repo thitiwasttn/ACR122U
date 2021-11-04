@@ -248,6 +248,7 @@ public final class MifareUtils {
      */
     private static String readMifareClassic1KBlock(MfReaderWriter reader, MfAccess access)
             throws CardException {
+        System.out.println(Arrays.toString(access.getKeyValue()));
         String data = null;
         try {
             MfBlock block = reader.readBlock(access)[0];
