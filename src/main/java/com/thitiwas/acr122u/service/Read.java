@@ -58,7 +58,7 @@ public class Read {
         channel.transmit(loadKey);
         String keyUsed = "A";
         byte keyTypeToUse = (byte) (keyUsed.equals("A") ? 96 : 97);
-        CommandAPDU auth = new CommandAPDU(255, 134, 0, 0, new byte[]{1, 0, 0, keyTypeToUse, 0});
+        CommandAPDU auth = new CommandAPDU(255, 134, 0, blockId, new byte[]{1, 0, 0, keyTypeToUse, 0});
         channel.transmit(auth);
         CommandAPDU readBlock = new CommandAPDU(0xFF, 0xB0, 0x00, blockId, 0x10);
         ResponseAPDU transmit1 = channel.transmit(readBlock);
